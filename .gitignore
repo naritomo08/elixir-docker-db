@@ -1,6 +1,0 @@
-/apps/
-!/apps/.gitkeep
-/data/mariadb/volume/
-!/data/mariadb/volume/.gitkeep
-/data/postgres/volume/
-!/data/postgres/volume/.gitkeep
