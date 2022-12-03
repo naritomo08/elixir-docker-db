@@ -56,10 +56,10 @@ sudo apt-get install git
 5. dockerコンテナ入手、デプロイ、立ち上げ
 
 ```bash
-curl -L -o temp.zip https://github.com/naritomo08/phx-compose/archive/refs/heads/ex02-rev.zip
+curl -L -o temp.zip https://github.com/naritomo08/elixir-docker-db/archive/refs/heads/main.zip
 unzip temp.zip
 rm temp.zip
-mv phx-compose-ex02-rev elixir-docker-db
+mv elixir-docker-db-main elixir-docker-db
 cd elixir-docker-db
 sudo bin/setup.sh
 sudo bin/start.sh
