@@ -1,0 +1,38 @@
+version: "3"
+services:
+  postgres:
+    image: postgres:12.6
+    volumes:
+      - ./data/postgres/volume:/var/lib/postgresql/data:cached
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+  mariadb:
+    image: mariadb:10.5
+    volumes:
+      - ./data/mariadb/volume:/var/lib/mysql:cached
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+  web:
+    build: .
+    command: bash
+    environment:
+      MIX_ENV: "dev"
+      PORT: "4000"
+    volumes:
+      - ./apps:/apps
+    working_dir: /apps
+    ports:
+      - "4000:4000"
+    tty: true
+    depends_on:
+      - postgres
+      - mariadb
+  adminer:
+    image: adminer:4.8.0
+    ports:
+      - "8081:8080"
+    depends_on:
+      - postgres
+      - mariadb
+
