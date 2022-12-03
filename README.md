@@ -66,7 +66,7 @@ sudo bin/start.sh
 sudo bin/login.sh
 ```
 
-6.Webサイト作成
+6. Webサイト作成
 
 ```bash
 mix phx.new testsite --database postgres
@@ -79,19 +79,19 @@ vi test.exs
 
 ```
 
-7.DB作成
+7. DB作成
 
 ```bash
 mix ecto.create
 ```
 
-8.サイト立ち上げ
+8. サイト立ち上げ
 
 ```bash
 mix phx.server
 ```
 
-9.サイト参照
+9. サイト参照
 
 ブラウザで以下のURLを参照してサイト参照できることを確認する。
 
@@ -99,13 +99,13 @@ mix phx.server
 http://localhost:4000
 ```
 
-10.DB管理ツール(adminer)にも参照できることを確認する。
+10. DB管理ツール(adminer)にも参照できることを確認する。
 
 ```bash
 http://localhost:8080
 ```
 
-11.コンテナ停止
+11. コンテナ停止
 
 ```bash
 Ctrl+c を2回
