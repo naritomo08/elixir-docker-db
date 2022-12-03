@@ -108,6 +108,7 @@ http://localhost:8080
 11.コンテナ停止
 
 ```bash
+Ctrl+c を2回
 exit
 sudo bin/stop.sh
 ```
