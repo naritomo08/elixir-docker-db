@@ -19,11 +19,19 @@ Docker を用いて Elixir/Phoenix アプリケーションの開発・学習を
 * Windows11
 
 ## 構築方法
+
 ### windoows11上にwsl/Ubuntu22.04をインストールする。
 
 参考>
 [Ubuntu 22.04でElixirの最短手順](https://qiita.com/piacerex/items/01e89435af0f7a454ad2)
 
+作業実施後、以下のコマンドをwindowsコマンドプロンプトで実施する。
+
+```bash
+wsl --unregister Ubuntu
+wsl --set-default Ubuntu-22.04
+wsl --list --verbose
+```
 
 ### docker-desktopをインストールする。
 
@@ -33,6 +41,9 @@ Docker を用いて Elixir/Phoenix アプリケーションの開発・学習を
 参考>
 [Docker Desktop インストール手順](https://qiita.com/R_R/items/a09fab09ce9fa9e905c5)
 
+Docker Desktopを使用しない(できない)場合、以下のサイトを参照
+
+[DockerDesktopからWSL2上のみで動くDockerに移行する](https://zenn.dev/taiga533/articles/11f1b21ef4a5ff)
 
 ### vscodeのインストールを行い、wsl2内のUbuntuコンソールを開く
 
