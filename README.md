@@ -4,7 +4,6 @@ Docker を用いて Elixir/Phoenix アプリケーションの開発・学習を
 
 ## 構築される環境
 
-* Debian 10 (Buster)
 * Erlang/OTP 23
 * Elixir 1.11.3
 * Phoenix 1.5.7
