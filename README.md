@@ -84,7 +84,7 @@ http://localhost:4000
 
 ### DB管理ツール(adminer)にも参照できることを確認する。
 
-http://localhost:8080
+http://localhost:8081
 
 * ログイン情報(postgresql)
   - データベース種類: Postgresql
