@@ -83,15 +83,23 @@ mix phx.server
 
 ブラウザで以下のURLを参照してサイト参照できることを確認する。
 
-```bash
 http://localhost:4000
-```
 
 ### DB管理ツール(adminer)にも参照できることを確認する。
 
-```bash
 http://localhost:8080
-```
+
+* ログイン情報(postgresql)
+  - データベース種類: Postgresql
+  - サーバ: postgres
+  - ユーザ名: postgres
+  - パスワード:postgres
+  
+* ログイン情報(mariadb)
+  - データベース種類: mysql
+  - サーバ: mariadb
+  - ユーザ名: root
+  - パスワード:root
 
 ### コンテナ停止
 
