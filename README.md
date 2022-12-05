@@ -67,11 +67,12 @@ sudo bin/login.sh
 mix phx.new testsite --database postgres
 →yを選択する。
 cd testsite
-vi dev.exs
+vi config/dev.exs
 8行目を"hostname: "postgres","にする。
-vi test.exs
+22行目を"http: [ip: {0, 0, 0, 0}, port: 4000],"にする。
+vi config/test.exs
 12行目を"hostname: "postgres","にする。
-
+19行目を"http: [ip: {0, 0, 0, 0}, port: 4002],"にする。
 ```
 
 ### DB作成
