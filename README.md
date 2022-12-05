@@ -66,12 +66,11 @@ sudo bin/login.sh
 ```bash
 mix phx.new testsite --database postgres
 →yを選択する。
-cd testsite
+cd config/testsite
 vi dev.exs
 8行目を"hostname: "postgres","にする。
-vi test.exs
+vi config/test.exs
 12行目を"hostname: "postgres","にする。
-
 ```
 
 ### DB作成
