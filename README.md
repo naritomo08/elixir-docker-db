@@ -102,7 +102,7 @@ http://localhost:8081
   - サーバ: postgres
   - ユーザ名: postgres
   - パスワード:postgres
-  
+
 * ログイン情報(mariadb)
   - データベース種類: mysql
   - サーバ: mariadb
