@@ -61,6 +61,13 @@ sudo bin/start.sh
 sudo bin/login.sh
 ```
 
+後にファイル編集などをして、git通知が煩わしいときは
+作成したフォルダで以下のコマンドを入れる。
+
+```bash
+ rm -rf .git
+```
+
 ### Webサイト作成
 
 ```bash
