@@ -79,6 +79,10 @@ vi config/dev.exs
 22行目を"http: [ip: {0, 0, 0, 0}, port: 4000],"にする。
 vi config/test.exs
 12行目を"hostname: "postgres","にする。
+*Phoenix1.6の場合
+22行目を"http: [ip: {0, 0, 0, 0}, port: 4000],"にする。
+vi config/test.exs
+12行目を"hostname: "postgres","にする。
 ```
 
 ### DB作成
