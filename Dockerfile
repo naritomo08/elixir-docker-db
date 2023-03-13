@@ -1,4 +1,4 @@
-FROM elixir:1.13.4
+FROM elixir:1.14.3
 
 ENV APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=DontWarn
 ENV DEBIAN_FRONTEND noninteractive
@@ -31,7 +31,7 @@ USER devel
 
 RUN mix local.hex --force
 RUN mix local.rebar --force
-RUN mix archive.install --force hex phx_new 1.6.15
+RUN mix archive.install --force hex phx_new 1.7.1
 
 RUN echo alias \
   elixirc=\"/usr/local/bin/elixirc --ignore-module-conflict\" \
