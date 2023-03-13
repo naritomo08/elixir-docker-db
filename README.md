@@ -5,8 +5,8 @@ Docker を用いて Elixir/Phoenix アプリケーションの開発・学習を
 ## 構築される環境
 
 * Erlang/OTP 24
-* Elixir 1.13.4
-* Phoenix 1.6.15
+* Elixir 1.14.3
+* Phoenix 1.7.1
 
 ## 必要なソフトウェア
 
@@ -75,10 +75,10 @@ mix phx.new testsite --database postgres
 →yを選択する。
 cd testsite
 vi config/dev.exs
-8行目を"hostname: "postgres","にする。
+7行目を"hostname: "postgres","にする。
 22行目を"http: [ip: {0, 0, 0, 0}, port: 4000],"にする。
 vi config/test.exs
-12行目を"hostname: "postgres","にする。
+11行目を"hostname: "postgres","にする。
 ```
 
 ### DB作成
