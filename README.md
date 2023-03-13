@@ -4,7 +4,7 @@ Docker を用いて Elixir/Phoenix アプリケーションの開発・学習を
 
 ## 構築される環境
 
-* Erlang/OTP 24
+* Erlang/OTP 25
 * Elixir 1.14.3
 * Phoenix 1.7.1
 
