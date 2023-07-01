@@ -122,3 +122,25 @@ Ctrl+c を2回
 exit
 sudo bin/stop.sh
 ```
+
+## テストアプリ作成(サイトは閉じておくこと。)
+
+```bash
+sudo bin/login.sh
+
+cd testsite
+
+mix phx.gen.live Users User users name:string age:integer comment:string
+
+帰ってくる案内に従い、router.exへリンク設定を書き込む
+
+mix ecto.migrate
+
+mix phx.server
+```
+
+## 動作確認
+
+http://localhost:4000/users
+
+ユーザー情報追加/削除を行えること。
