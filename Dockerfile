@@ -17,6 +17,8 @@ RUN apk update && apk add --no-cache \
   mariadb-client \
   sudo
 
+RUN apk add --no-cache python3 py3-pip
+
 # Hex & Rebar（Elixirビルドツール）のインストール
 RUN mix local.hex --force && \
     mix local.rebar --force && \
