@@ -19,6 +19,8 @@ RUN apk update && apk add --no-cache \
 
 RUN apk add --no-cache python3 py3-pip
 
+RUN apk add --no-cache nodejs=14.20.0-r0 npm=6.14.17-r0
+
 # Hex & Rebar（Elixirビルドツール）のインストール
 RUN mix local.hex --force && \
     mix local.rebar --force && \
