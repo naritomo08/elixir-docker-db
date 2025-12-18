@@ -54,7 +54,7 @@ Docker Desktopを使用しない(できない)場合、以下のサイトを参�
 ### dockerコンテナ入手、デプロイ、立ち上げ
 
 ```bash
-git clone -b phx1.6 https://github.com/naritomo08/elixir-docker-db.git elixir-docker-db
+git clone -b phx1.7 https://github.com/naritomo08/elixir-docker-db.git elixir-docker-db
 cd elixir-docker-db
 sudo bin/setup.sh
 sudo bin/start.sh
