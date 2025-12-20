@@ -10,7 +10,7 @@ RUN apt-get -y install git vim sudo inotify-tools mariadb-client
 
 RUN curl -sL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 
-RUN apt-get -y install nodejs npm && npm install -g npm
+RUN apt-get -y install nodejs && npm install -g npm
 
 RUN wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
 RUN echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" | \
