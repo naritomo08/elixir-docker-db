@@ -12,11 +12,22 @@ RUN curl -sL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 
 RUN apt-get -y install nodejs && npm install -g npm
 
-RUN wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
-RUN echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" | \
-  sudo tee /etc/apt/sources.list.d/pgdg.list
-RUN sudo apt-get update
-RUN sudo apt-get -y install postgresql-client-12
+# prerequisites
+RUN apt-get update && apt-get -y install ca-certificates curl gnupg
+
+# add PGDG repository key (keyring)
+RUN install -d /usr/share/postgresql-common/pgdg \
+ && curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc \
+    | gpg --dearmor -o /usr/share/postgresql-common/pgdg/pgdg.gpg
+
+# add PGDG repository (bookworm 固定。lsb_release不要)
+RUN echo "deb [signed-by=/usr/share/postgresql-common/pgdg/pgdg.gpg] http://apt.postgresql.org/pub/repos/apt bookworm-pgdg main" \
+    > /etc/apt/sources.list.d/pgdg.list
+
+# install latest client from PGDG
+RUN apt-get update \
+ && apt-get -y install postgresql-client \
+ && psql --version
 
 ARG UID=1000
 ARG GID=1000
