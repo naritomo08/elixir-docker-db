@@ -1,11 +1,11 @@
 #!/bin/bash
 set -eu
 
-docker-compose stop
+docker compose stop
 
 rm -rf _build deps
 
-BUILD_CMD="docker-compose build --no-cache"
+BUILD_CMD="docker compose build --no-cache"
 CONTAINER_NAME="web postgres mariadb"
 
 case "$OSTYPE" in
