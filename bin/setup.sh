@@ -13,7 +13,9 @@ case "$OSTYPE" in
     $BUILD_CMD --build-arg UID=1000 --build-arg GID=1000 $CONTAINER_NAME
     ;;
   linux*)
-    $BUILD_CMD $CONTAINER_NAME
+    HOST_UID=${SUDO_UID:-$(id -u)}
+    HOST_GID=${SUDO_GID:-$(id -g)}
+    $BUILD_CMD --build-arg UID="$HOST_UID" --build-arg GID="$HOST_GID" $CONTAINER_NAME
     ;;
   *)
     echo "Unknown OS Type: $OSTYPE"
