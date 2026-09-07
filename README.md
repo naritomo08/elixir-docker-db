@@ -121,3 +121,8 @@ Ctrl+c を2回
 exit
 sudo bin/stop.sh
 ```
+
+## 関連Qiita記事
+
+- [Elixir/Phoenixをdocker環境で立ち上げてみる。](https://qiita.com/naritomo08/items/fecf4ace7b9ca9078102)
+- [Elixir/PhoenixとNeosVRを連携させる。](https://qiita.com/naritomo08/items/5f04266424ec46312122)
